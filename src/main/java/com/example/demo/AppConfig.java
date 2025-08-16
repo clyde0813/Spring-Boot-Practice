@@ -25,6 +25,10 @@ public class AppConfig {
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
+    /* 
+    Q : Repository가 Bean으로 등록되어야 할까?
+
+    */
     @Bean
     public MemoryMemberRepository memberRepository() {
         return new MemoryMemberRepository();
