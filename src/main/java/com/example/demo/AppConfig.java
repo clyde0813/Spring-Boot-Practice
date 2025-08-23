@@ -27,7 +27,9 @@ public class AppConfig {
 
     /* 
     Q : Repository가 Bean으로 등록되어야 할까?
-
+    A : Bean으로 등록 안하면 memberService, orderService에서 
+    repository 호출시 각각 다른 인스턴스로 생성하여 넘긴다! 
+    싱글톤 스코프에 안들어감! 싱글톤 안됨!!!!
     */
     @Bean
     public MemoryMemberRepository memberRepository() {
